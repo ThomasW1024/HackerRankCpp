@@ -1,5 +1,4 @@
 /*https://www.hackerrank.com/challenges/c-tutorial-conditional-if-else/problem*/
-#include <vector>
 #include <iostream>
 #include <vector>
 #include <string>
