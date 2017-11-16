@@ -1,3 +1,5 @@
+/*https://www.hackerrank.com/challenges/arrays-introduction*/
+
 #include <vector>
 #include <iostream>
 int main() {
