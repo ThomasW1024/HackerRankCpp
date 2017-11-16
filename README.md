@@ -1,3 +1,4 @@
 # HackerRankCpp
-solution of C++ problem in HackerRank.com \n
-problem to link https://www.hackerrank.com/domains/cpp
+solution of C++ problem in HackerRank.com
+
+problem [dashboard]( https://www.hackerrank.com/domains/cpp)
