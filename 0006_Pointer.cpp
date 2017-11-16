@@ -1,3 +1,5 @@
+/*https://www.hackerrank.com/challenges/c-tutorial-pointer*/
+
 #include <iostream>
 #include <cmath>
 
