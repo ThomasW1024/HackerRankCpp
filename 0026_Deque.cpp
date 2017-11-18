@@ -7,7 +7,7 @@ void printKMax(int arr[], int n, int k){
     int max_pos = -1; //use to skip repeated inner loop
     for(int offset = 0; offset+k <= n;++offset){
         if(max_pos < offset){ // if max value is out of the window
-            auto iter = std::max_element( arr+offset, arr+(offset)+k );
+            auto iter = std::max_element( arr+offset, arr+(offset)+k ); //excluding end element
             std::cout << *iter << " ";
             max_pos = iter - arr;
         }else{//try compare max value with the next value
