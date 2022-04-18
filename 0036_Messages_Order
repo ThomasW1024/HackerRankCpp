@@ -1,0 +1,49 @@
+#include <iostream>
+#include <algorithm>
+#include <vector>
+
+using namespace std;
+
+class Message {
+private:
+    int id_;
+    string text_;
+public: 
+    Message(int id, const string& text): id_{id}, text_{text}{ }
+    
+    Message(const Message& _copy): id_{_copy.id_}, text_(_copy.text_){}
+    Message(Message&& _other): id_(move(_other.id_)), text_(move(_other.text_)){}
+    
+    Message& operator=( const Message& __m){
+        id_ = __m.id_;
+        text_ = __m.text_;
+        return *this;
+    }
+    
+    Message& operator=(Message&& __m){
+        id_ = __m.id_;
+        text_ = __m.text_;
+        return *this;
+    }
+    
+    const string& get_text() const {
+        return text_;
+    }
+    
+    friend bool operator<(const Message &__lhs, const Message &__rhs) {
+        return __lhs.id_ < __rhs.id_;
+    }
+    
+};
+
+class MessageFactory {
+private:
+    int tracker_;
+public:
+    MessageFactory():tracker_{0} {}
+    Message create_message(const string& text) {
+        return Message(++tracker_, text);
+    }
+};
+
+class Recipient {
